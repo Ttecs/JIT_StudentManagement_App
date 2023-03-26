@@ -1,4 +1,3 @@
-import axios from "axios";
 import { STUDENTS, getCommonAxios } from "./Apis";
 
 //create a callback method that handle the request for post a student in axios
