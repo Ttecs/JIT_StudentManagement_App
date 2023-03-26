@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState } from "react";
 import "./AddStudentDetails.scss";
 import homelogo from "../../assets/images/home-5-xxl.png";
@@ -42,14 +43,16 @@ function AddStudentDetails(props) {
 
   //map the  props.student_info.classRoom_data
   React.useEffect(() => {
+    // eslint-disable-next-line react/prop-types
     console.log("props.student_info.classRoom_data", props.student_info);
-    if (props.student_info.classRoom_data) {
-      const options = props.student_info.classRoom_data.map((item) => {
-        return { value: item.classroomID, label: item.classroomName };
-      });
-      setOptions(options);
-    }
-  }, []);
+
+    // eslint-disable-next-line react/prop-types
+    const options = props.student_info.classRoom_data.map((item) => {
+      return { value: item.classroomID, label: item.classroomName };
+    });
+    setOptions(options);
+    // eslint-disable-next-line react/prop-types
+  }, [props.student_info.classRoom_data]);
 
   function handleChange(event) {
     setSelectedValue(event.target.value);
