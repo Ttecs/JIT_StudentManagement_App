@@ -1,0 +1,167 @@
+.add_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100vw;
+  background-color: #e8e8e8;
+
+  .add_topbar {
+    background-color: #41d657;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    .add_topbar_firstIcon {
+      .add_homelogo {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+      }
+    }
+
+    .add_topbar_SecondIcon {
+      .add_homelogo {
+        width: 30px;
+        height: 30px;
+        margin: 10px;
+      }
+    }
+  }
+
+  .add_studentForm {
+    height: 350px;
+    width: 95%;
+    background-color: #e8e8e8;
+    margin-top: 20px;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: #525252;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center; /* aligns horizontally */
+
+    .add_studentForm_smalltopbar {
+      height: 30px;
+      width: 100%;
+      background-color: #0f691e;
+      display: flex;
+      align-items: center;
+
+      .add_studentForm_smalltopbar_text {
+        color: #e8e8e8;
+      }
+      .add_studentForm_logo {
+        .studentIcon {
+          width: 20px;
+          height: 20px;
+          margin: 5px;
+        }
+      }
+    }
+
+    .add_studentForm_body {
+      display: flex;
+      width: 95%;
+      height: 265px;
+      background-color: #e8e8e8;
+      z-index: 1;
+      margin: 10px;
+      align-items: center;
+      justify-content: center;
+      display: table; /* center aligns horizontally and vertically */
+
+      .add_grid1 {
+        .add_grid2 {
+          // margin-left: 5px;
+          .add_inputFiled {
+            width: 100%;
+            height: 30px;
+            border-radius: 3px;
+            border-width: 1px;
+            border-color: #525252;
+          }
+        }
+        .add_grid23 {
+          align-items: center;
+          justify-content: space-evenly;
+          display: flex;
+          .add_save_button {
+            width: 150px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: #087a19;
+            color: #e8e8e8;
+          }
+          .add_save_button2 {
+            width: 150px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: #980e12;
+            color: #e8e8e8;
+          }
+          .add_save_button3 {
+            width: 150px;
+            height: 30px;
+            border-radius: 3px;
+            background-color: #b3990b;
+            color: #e8e8e8;
+          }
+        }
+      }
+    }
+  }
+  .add_studentForm2 {
+    height: 350px;
+    width: 95%;
+    background-color: #e8e8e8;
+    margin-top: 20px;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: #525252;
+
+    display: table;
+
+    justify-content: center;
+    align-items: center;
+
+    .add_studentForm_smalltopbar2 {
+      height: 30px;
+      width: 100%;
+      background-color: #0f691e;
+      display: flex;
+      align-items: center;
+
+      .add_studentForm_smalltopbar_text2 {
+        color: #e8e8e8;
+      }
+      .add_studentForm_logo2 {
+        .studentIcon2 {
+          width: 20px;
+          height: 20px;
+          margin: 5px;
+        }
+      }
+    }
+
+    .add_studentForm_body2 {
+      display: flex;
+      width: 95%;
+      height: 265px;
+      background-color: #e8e8e8;
+      z-index: 1;
+      margin: 10px auto;
+
+      display: table;
+      /* center aligns horizontally and vertically */
+    }
+  }
+}
+
+.grid-elements {
+  background-color: #e8e8e8;
+  align-items: center;
+  justify-content: center;
+}

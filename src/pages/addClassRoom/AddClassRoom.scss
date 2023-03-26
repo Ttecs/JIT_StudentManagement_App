@@ -1,0 +1,120 @@
+.addClass_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #e8e8e8;
+    
+    .addClass_topbar {
+      background-color: #41d657;
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      
+      .addClass_topbar_firstIcon {
+        .addClass_homelogo {
+          width: 30px;
+          height: 30px;
+          margin: 10px;
+        }
+      }
+      
+      .addClass_topbar_SecondIcon {
+        .addClass_homelogo {
+          width: 30px;
+          height: 30px;
+          margin: 10px;
+        }
+      }
+    }
+    
+    .addClass_studentForm {
+      height: 350px;
+      width: 95%;
+      background-color: #e8e8e8;
+      margin-top: 20px;
+      border-radius: 3px;
+      border-width: 2px;
+      border-color: #525252;
+      display: flex;
+      flex-direction: column;
+      
+      align-items: center; /* aligns horizontally */
+    
+      .addClass_studentForm_smalltopbar {
+        height: 30px;
+        width: 100%;
+        background-color: #0f691e;
+        display: flex;
+        align-items: center;
+        
+    .addClass_studentForm_smalltopbar_text{
+        color: #e8e8e8;
+    }
+        .addClass_studentForm_logo {
+          .studentIcon {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+          }
+        }
+      }
+    
+      .addClass_studentForm_body {
+        display: flex;
+        width: 95%;
+        height: 265px;
+        background-color: #e8e8e8;
+        z-index: 1;
+        margin: 10px;
+        align-items: center;
+        justify-content: center; /* center aligns horizontally and vertically */
+    
+        .addClass_grid1 {
+          .addClass_grid2 {
+            // margin-left: 5px;
+            .addClass_inputFiled {
+              width: 100%;
+              height: 30px;
+              border-radius: 3px;
+              border-width: 1px;
+              border-color: #525252;
+            }
+            
+          }
+          .addClass_grid23{
+            
+            align-items: center;
+            justify-content: space-evenly;
+            display: flex;
+            .addClass_save_button{
+             width: 150px;
+                height: 30px;
+                border-radius: 3px;
+                background-color: #087a19;
+                color: #e8e8e8;
+            }
+            .addClass_save_button2{
+                width: 150px;
+                   height: 30px;
+                   border-radius: 3px;
+                   background-color: #980e12;
+                     color: #e8e8e8;
+                   
+               }
+            .addClass_save_button3{
+                width: 150px;
+                   height: 30px;
+                   border-radius: 3px;
+                   background-color: #b3990b;
+                        color: #e8e8e8;
+               }
+          }
+          
+        }
+      }
+    }
+  }
+  

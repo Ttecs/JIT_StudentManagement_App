@@ -1,0 +1,44 @@
+.navbar{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #013914;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    .container{
+        width : 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        .logo{
+            font-size: 34px;
+            font-weight:bold;
+         .text{
+            
+         }
+         .dot{
+            color:#1dbf73
+         }
+        }
+        .lists{
+            display: flex;
+            gap:24px;
+            align-items: center;
+            font-weight: 500;
+
+           button{
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            color: white;
+            background-color: transparent;
+            cursor: pointer;
+            &:hover{
+                background-color: #1dbf73;
+                border-color:#1dbf73;
+            }
+           }
+        }
+
+    }
+}
