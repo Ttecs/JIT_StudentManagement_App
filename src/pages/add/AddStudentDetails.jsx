@@ -34,7 +34,7 @@ function AddStudentDetails(props) {
   const [contactNo, setContactNo] = useState("");
   const [email, setEmail] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
-  const [age, setAge] = useState(30);
+  const [age, setAge] = useState();
   const [selectedValue, setSelectedValue] = useState("");
   const [students2, setStudents] = useState([]);
   const [flag, setFlag] = useState(false);
@@ -58,6 +58,7 @@ function AddStudentDetails(props) {
     setSelectedValue(event.target.value);
   }
 
+  // callback function for APi calls
   const callback = (res, status) => {
     if (status == "OK") {
       setFirstName("");
@@ -91,12 +92,24 @@ function AddStudentDetails(props) {
   };
 
   React.useEffect(() => {
-    props.student_info.student_data.length == 0 ? getStudents(callback) : null;
+    getStudents(callback);
 
     getClssRooms(callback);
   }, [flag]);
 
+  const calculateAge = (dob) => {
+    const birthDate = new Date(dob);
+    const currentDate = new Date();
+
+    const timeDiff = currentDate.getTime() - birthDate.getTime();
+    const age = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365));
+
+    console.log(age);
+    return age;
+  };
+
   const onSubmit = () => {
+    let ageS = calculateAge(dateOfBirth);
     const data = {
       firstName,
       lastName,
@@ -104,7 +117,7 @@ function AddStudentDetails(props) {
       contactNo,
       email,
       dateOfBirth,
-      age,
+      ageS,
       selectedValue,
     };
     console.log(data);
@@ -120,6 +133,7 @@ function AddStudentDetails(props) {
 
   const handleEdit = () => {
     console.log("edit");
+    let ageS = calculateAge(dateOfBirth);
     const data = {
       firstName,
       lastName,
@@ -127,7 +141,7 @@ function AddStudentDetails(props) {
       contactNo,
       email,
       dateOfBirth,
-      age,
+      ageS,
       selectedValue,
       studentId,
     };
@@ -147,6 +161,7 @@ function AddStudentDetails(props) {
     setSelectedValue(row.classroomID);
     setStudentId(row.studentID);
   };
+
   return (
     <div className="add_container">
       {/* topbar section start */}
@@ -230,6 +245,16 @@ function AddStudentDetails(props) {
               <input
                 value={dateOfBirth}
                 type="date"
+                max={
+                  new Date(
+                    new Date().getFullYear() - 5,
+                    new Date().getMonth(),
+                    new Date().getDate()
+                  )
+                    .toISOString()
+                    .split("T")[0]
+                }
+                min={new Date("1900-01-01").toISOString().split("T")[0]}
                 className="add_inputFiled"
                 onChange={(event) => setDateOfBirth(event.target.value)}
               />
